@@ -1,0 +1,46 @@
+<ion-split-pane>
+  <ion-menu>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 1]">
+            <ion-label>
+              コンテンツ１
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 2]">
+            <ion-label>
+              コンテンツ２
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 3]">
+            <ion-label>
+              コンテンツ３
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item [routerDirection]="'root'" [routerLink]="''">
+            <ion-label>
+              ログインへ戻る
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-app main>
+    <app-one *ngIf="contentsNo == 1"></app-one>
+    <app-two *ngIf="contentsNo == 2"></app-two>
+    <app-three *ngIf="contentsNo == 3"></app-three>
+  </ion-app>
+</ion-split-pane>
