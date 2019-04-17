@@ -13,8 +13,22 @@ import { ThreeComponent } from './contents/three/three.component';
 const routes: Routes = [
   {
     path: '',
-    component: MainPage
-  }
+    component: MainPage,
+    children: [
+      {
+        path: 'one',
+        component: OneComponent,
+      },
+      {
+        path: 'two',
+        component: TwoComponent,
+      },
+      {
+        path: 'three',
+        component: ThreeComponent,
+      }
+    ]
+  },
 ];
 
 @NgModule({

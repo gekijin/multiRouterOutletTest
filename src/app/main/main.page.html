@@ -8,21 +8,21 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle auto-hide="false">
-          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 1]">
+          <ion-item [routerDirection]="'root'" [routerLink]="'/main/one'">
             <ion-label>
               コンテンツ１
             </ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle auto-hide="false">
-          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 2]">
+          <ion-item [routerDirection]="'root'" [routerLink]="'/main/two'">
             <ion-label>
               コンテンツ２
             </ion-label>
           </ion-item>
         </ion-menu-toggle>
         <ion-menu-toggle auto-hide="false">
-          <ion-item [routerDirection]="'root'" [routerLink]="['/main', 3]">
+          <ion-item [routerDirection]="'root'" [routerLink]="'/main/three'">
             <ion-label>
               コンテンツ３
             </ion-label>
@@ -38,9 +38,5 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-app main>
-    <app-one *ngIf="contentsNo == 1"></app-one>
-    <app-two *ngIf="contentsNo == 2"></app-two>
-    <app-three *ngIf="contentsNo == 3"></app-three>
-  </ion-app>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-split-pane>

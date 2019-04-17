@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -8,17 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MainPage implements OnInit {
 
-  contentsNo = 1;
-
-  constructor(
-    private route: ActivatedRoute
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.contentsNo = Number(params.get('no'));
-      console.log(this.contentsNo);
-    })
   }
 
 }
